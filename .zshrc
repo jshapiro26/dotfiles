@@ -3,13 +3,14 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="pygmalion"
 
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git git-open docker tmux brew rvm ruby rails)
 
 # User configuration
 
 export HOMEBREW_NO_ANALYTICS=1
+export EJSON_KEYDIR=/Users/$HOME/.ssh
 
 ## Alias'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -51,7 +52,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export HISTTIMEFORMAT="%d.%m.%y %T "
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # GO Config

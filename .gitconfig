@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Jeremy Shapiro
+	email = jeremynshapiro@gmail.com
+	signingkey = AFBD0B1E27B6F7BD
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = /Users/jshapiro/.gitignore_global
