@@ -5,6 +5,12 @@ set -e
 git clone git://github.com/robbyrussell/oh-my-zsh.git ${HOME}/.oh-my-zsh
 chsh -s /bin/zsh
 
+# install java
+# downloaded dmg
+# mount
+# install .pkg
+# unmount
+
 # install dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 echo ".dotfiles" >> ${HOME}/.gitignore
