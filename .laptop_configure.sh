@@ -33,7 +33,7 @@ LATEST_GPG_DMG=$(curl -s https://gpgtools.org/ | grep dmg | head -n1 | awk '{pri
 wget -O ${HOME}/Downloads/gpgsuite.dmg $LATEST_GPG_DMG
 hdiutil attach ${HOME}/Downloads/gpgsuite.dmg
 sudo installer -pkg /Volumes/GPG\ Suite/Install.pkg -target /
-hdiutil detach ${HOME}/Downloads/gpgsuite.dmg
+hdiutil detach /Volumes/GPG\ Suite/
 echo ""
 echo "Restore backup of ~/.gnupg manually"
 
@@ -46,3 +46,9 @@ sudo cp ${HOME}/Downloads/Visual\ Studio\ Code.app /Applications/
 wget -O ${HOME}/Downloads/iterm2.zip https://iterm2.com/downloads/stable/iTerm2-3_1_5.zip
 unzip ${HOME}/Downloads/iterm2.zip
 sudo cp ${HOME}/Downloads/iTerm.app /Applications/
+
+# install docker
+wget -O ${HOME}/Downloads/docker.dmg https://download.docker.com/mac/stable/Docker.dmg
+hdiutil attach ${HOME}/Downloads/docker.dmg
+sudo cp /Volumes/Docker/Docker.app -target /
+hdiutil detach /Volumes/Docker/
