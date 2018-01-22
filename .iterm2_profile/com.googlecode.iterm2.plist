@@ -409,11 +409,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>136 76 606 456 0 0 1920 1178 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>814 332 796 473 0 0 1920 1178 </string>
+	<string>813 469 796 473 0 0 1920 1178 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>304 1194 592 584 0 0 3200 1778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>515 36 710 1132 0 0 1920 1178 </string>
+	<string>73 36 1368 1047 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1280 2 1278 707 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -1245,11 +1245,17 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-02T20:49:08Z</date>
+	<date>2018-01-20T22:37:24Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
 	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>TabStyle</key>
+	<integer>1</integer>
+	<key>TabViewType</key>
+	<integer>0</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1508952448</real>
 	<key>findIgnoreCase_iTerm</key>

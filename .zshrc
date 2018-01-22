@@ -10,7 +10,7 @@ plugins=(git git-open docker tmux brew rvm ruby rails)
 # User configuration
 
 export HOMEBREW_NO_ANALYTICS=1
-export EJSON_KEYDIR=/Users/$HOME/.ssh
+export EJSON_KEYDIR=$HOME/.ssh
 
 ## Alias'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -63,7 +63,8 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "${HOME}/Downloads/google-cloud-sdk/path.zsh.inc" ]; then source "${HOME}/Downloads/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f '/Users/jshapiro/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then source '/Users/jshapiro/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then source "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
+if [ -f '/Users/jshapiro/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then source '/Users/jshapiro/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/openssl/bin:$PATH"
