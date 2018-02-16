@@ -12,7 +12,7 @@ chsh -s /bin/zsh
 # unmount
 
 # install dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 echo ".dotfiles" >> ${HOME}/.gitignore
 git clone --bare https://github.com/jshapiro26/dotfiles.git $HOME/.dotfiles
 
