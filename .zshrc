@@ -23,6 +23,10 @@ showcert() {
   openssl s_client -showcerts -servername $1 -connect $1:443
 }
 
+ejsonify() {
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' $1
+}
+
 source $ZSH/oh-my-zsh.sh
 
 ## Fix Num-pad mapping on full-size keyboard
@@ -64,10 +68,12 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # Pyenv
 eval "$(pyenv init -)"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jshapiro/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then source '/Users/jshapiro/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+if [ -f '$HOME/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jshapiro/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then source '/Users/jshapiro/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+if [ -f '$HOME/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
