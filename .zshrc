@@ -11,12 +11,14 @@ plugins=(git git-open docker tmux brew rvm ruby rails)
 
 export HOMEBREW_NO_ANALYTICS=1
 export EJSON_KEYDIR=$HOME/.ssh
+export KUBECONFIG=~/.kube/config
 
 ## Alias'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias mode='stat -f %Mp%Lp'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 
 ## Functions
 showcert() {
@@ -25,6 +27,10 @@ showcert() {
 
 ejsonify() {
   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' $1
+}
+
+kuberestart() {
+  KUBECONFIG=~/.kube/config kubernetes-restart $1 $2 --deployments=$1
 }
 
 source $ZSH/oh-my-zsh.sh
