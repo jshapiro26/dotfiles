@@ -77,9 +77,9 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/jshapiro/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jshapiro/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '$HOME/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/jshapiro/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jshapiro/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
