@@ -5,7 +5,7 @@ ZSH_THEME="pygmalion"
 HYPHEN_INSENSITIVE="true"
 #ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git git-open docker tmux brew rvm ruby rails)
+plugins=(git docker tmux brew ruby rails)
 
 # User configuration
 
@@ -23,14 +23,6 @@ alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/'
 ## Functions
 showcert() {
   openssl s_client -showcerts -servername $1 -connect $1:443
-}
-
-ejsonify() {
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' $1
-}
-
-kuberestart() {
-  KUBECONFIG=~/.kube/config kubernetes-restart $1 $2 --deployments=$1
 }
 
 source $ZSH/oh-my-zsh.sh
@@ -75,11 +67,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # Pyenv
 eval "$(pyenv init -)"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jshapiro/.gcloud/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jshapiro/.gcloud/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jshapiro/.gcloud/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jshapiro/.gcloud/google-cloud-sdk/completion.zsh.inc'; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
