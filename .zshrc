@@ -1,11 +1,15 @@
 export ZSH=$HOME/.oh-my-zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-ZSH_THEME="pygmalion"
+#ZSH_THEME="pygmalion"
+ZSH_THEME="agnoster"
+# Agnoster Theme Variables
+DEFAULT_USER="jeremy_shapiro"
 
 HYPHEN_INSENSITIVE="true"
 #ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git docker tmux brew ruby rails)
+plugins=(git git-open docker tmux brew ruby rails)
 
 # User configuration
 
